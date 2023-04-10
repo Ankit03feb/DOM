@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <p id="title">thapa tenchinal</p> 
+    <p class="name">Ankit Dubey</p>
+    <p id="title1">naam jaan kr kya kroge</p> 
+     <!-- <p class="name">Ankit Dubey 1</p>
+    <p class="name">Ankit Dubey 2</p>  -->
+    <ul><li>a</li>
+        <li>b</li></ul>
+
+
+
+    <script>
+        // how to acces elemnet by id
+        var findid=  document.getElementById("title").innerHTML;
+        document.write(findid);
+        document.write("<br>")
+        document.write("<br>")
+        // hoe to acces element by class
+        var findclass = document.getElementsByClassName("name")[0].innerHTML;
+        document.write(findclass);
+        document.write("<br>")
+        document.write("<br>")
+        // how to access through tag name
+        var tag = document.getElementsByTagName("p");
+        document.write(tag)
+        document.write("<br>")
+        document.write("<br>")
+       // how to acces first element quary selctoe meand show the first element
+       var firstElement= document.querySelector("p").innerHTML
+       document.write(firstElement)
+       document.write("<br>")
+        document.write("<br>")
+
+    //     dom parents childer silbling
+
+     var child = document.body.children;
+     console.log(child);
+     
+    //  add a new child in abody
+    var  para = document.createElement("p")
+    var textnode = document.createTextNode("give me ur number")
+      var c = para.appendChild(textnode);
+   
+    console.log(para)
+    document.body.appendChild(para)
+
+    // acces first child and last chlild
+    var findfirstchild = document.querySelector("ul")
+    console.log(findfirstchild)
+    console.log(findfirstchild.firstChild);
+    console.log(findfirstchild.lastChild);
+    
+//   silbings and parents
+  var firsrtsibling = title.nextElementSibling;
+  console.log(firsrtsibling);
+  console.log(findfirstchild.parentNode);
+//  javascript css
+// one by one
+    var changecolour = document.getElementById("title").style.color="red";
+    // all at once
+    var startcoluring = document.getElementById("title1").setAttribute(
+        "style" , " colour : red ; background : blue");
+    
+</script>
+</body>
+</html>
